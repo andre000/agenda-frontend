@@ -6,3 +6,19 @@ body {
   color: $font-default-color;
   min-height: 100vh;
 }
+
+.custom-scrollbar {
+  scrollbar-color: #ddd #0000;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #0000;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #ddd;
+  }
+}
