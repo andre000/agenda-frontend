@@ -1,28 +1,23 @@
 <template>
   <div class="container">
-    <main-aside></main-aside>
-    <agenda-list></agenda-list>
+    <ag-list></ag-list>
   </div>
 </template>
 
 <script>
-export default {}
+import { mapActions } from 'vuex'
+export default {
+  created() {
+    this.loadAgenda()
+  },
+  methods: {
+    ...mapActions(['loadAgenda']),
+  },
+}
 </script>
 
 <style lang="scss" scoped>
 .container {
-  display: grid;
-  grid-template-columns: 0.3fr 0.7fr;
-  grid-template-rows: 1fr;
-  gap: 1px 1px;
-  grid-template-areas: 'aside list';
   min-height: 100vh;
-  div:first-child {
-    grid-area: aside;
-  }
-
-  div:last-child {
-    grid-area: list;
-  }
 }
 </style>
