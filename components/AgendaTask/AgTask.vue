@@ -38,7 +38,7 @@ export default {
 
   computed: {
     day() {
-      return new Date(this.task.datetime).getDay()
+      return new Date(this.task.datetime).getDate()
     },
 
     localDate() {
